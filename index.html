@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* navbar */
+    
+        .navbar {
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    background: #211d1d; /* Almost black background */
+    color: #ffffff; /* White text for contrast */
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    color: #ffffff; /* White text for links */
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #f0f0f0 !important; /* Lighter shade on hover for visibility */
+}
+
+.custom-toggler {
+    border-color: #ffffff; /* White border for the toggler */
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path stroke="rgba(255,255,255,1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>');
+    /* White icon for contrast on dark background */
+}
+
+
+
+/* gif section */
+
+        .img-fluid {
+    max-width: 75%; /* Ensure the GIF scales responsively */
+    height: auto;
+        }
+        
+        .image-section{
+            max-width:50%;
+            height: auto;
+            margin:auto;
+            margin-top: 50px;
+        }
+
+
+        /* buttonsection */
+        .btn{
+            margin:auto;
+            padding: 10px 20px;
+        
+        }
+
+
+/* Card section */
+.card-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .card img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .bottom-card {
+            grid-column: span 2;
+            justify-self: center;
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+/* Portfolio button */
+
+.button-container {
+            text-align:center;
+            margin: auto;
+        }
+
+        .home-button {
+            background: linear-gradient(90deg, #221a5c, #0b0a20);
+            color: #f9fff9;
+            border: none;
+            border-radius: 12px;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform  margin-bottom: 10%;
+        }
+
+        .home-button:hover {
+            background: linear-gradient(90deg, #848484, #161816);
+            transform: scale(1.1);
+            color:#ffffff;
+        }
+
+        .home-button:active {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .home-button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        }
+
+
+
+
+    /* Scroll button */
+    .scroll-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: linear-gradient(45deg, #221a5c, #0b0a20);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .scroll-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .scroll-btn:focus {
+      outline: none;
+    }
+
+    .scroll-btn svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .scroll-btn {
+        width: 50px;
+        height: 50px;
+      }
+
+      .scroll-btn svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+
+
+    </style>
+</head>
+
+
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="file:///C:/Jia/ISDI/ASSIGNMENTS/Digital%20prototyping/Bootstrap/Home.html"><img src="C:\Jia\ISDI\ASSIGNMENTS\Digital prototyping\Bootstrap\Images\logo jia new-02.png" alt="my brand" height="auto" width="180px"></a>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="file:///C:/Jia/ISDI/ASSIGNMENTS/Digital%20prototyping/Bootstrap/Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="C:\Jia\ISDI\ASSIGNMENTS\Digital prototyping\Bootstrap\About me.html">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="C:\Jia\ISDI\ASSIGNMENTS\Digital prototyping\Bootstrap\Portfolio pg.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="file:///C:/Jia/ISDI/ASSIGNMENTS/Digital%20prototyping/Bootstrap/contact.html" target="_self">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Welcome page -->
+<br> <br> <br> <br> <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+              <h1>Welcome to my creative corner!</h1> <br>
+                <p>I believe in the power of storytelling. <br>I specialise in creating visually stunning and effective designs <br> that communicate your message clearly and persuasively.</p>
+                <br>
+                <a href="https://web.whatsapp.com/" class="btn btn-dark">Let's chat!</a>
+        
+                <br>
+            </div>
+           
+            <div class="col-md-6">
+                <img src="C:\Jia\ISDI\ASSIGNMENTS\Digital prototyping\Bootstrap\Images\Black Retro Graduation Video Message.gif" alt="GIF" class="img-fluid">
+
+              </div>
+        </div>
+      </div>
+
+
+       <!-- Button to scroll down -->
+  <button class="scroll-btn" id="scrollToBottomBtn" aria-label="Scroll to Bottom">
+    <!-- Down arrow icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="5" x2="12" y2="19"></line>
+      <polyline points="19 12 12 19 5 12"></polyline>
+    </svg>
+  </button>
+  <script>
+    // Scroll to the bottom functionality
+    document.getElementById('scrollToBottomBtn').addEventListener('click', function () {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+
+
+      <br><br><br>
+<!-- How can I help you -->
+<br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="text-center">
+          <h2 class="text-center">How can I help you?</h2> <br>
+            <p>I believe in the power of storytelling. <br>I specialise in creating visually stunning and effective designs <br> that communicate your message clearly and persuasively.</p>
+            <br>
+        </div>
+
+       <br><br>
+
+        </div></div>
+    
+ 
+<!-- cards for how can I help you -->
+<br>
+<div class="card-container">
+    <div class="card">
+        <a href=""><img src="C:\Jia\ISDI\ASSIGNMENTS\Digital prototyping\Bootstrap\Images\indesign logo.png" alt="Indesign"></a>
+        <h3>Editorial design</h3>
+    </div>
+    <div class="card">
+        <a href=""> <img src="C:\Jia\ISDI\ASSIGNMENTS\Digital prototyping\Bootstrap\Images\figma logo.png" alt="Figma"></a>
+        <h3>UI/UX Design</h3>
+    </div>
+    <div class="card">
+        <a href=""> <img src="C:\Jia\ISDI\ASSIGNMENTS\Digital prototyping\Bootstrap\Images\illustrator logo.png" alt="Illustrator"></a>
+        <h3>Branding & Packaging</h3>
+    </div>
+    <div class="card">
+        <a href=""> <img src="C:\Jia\ISDI\ASSIGNMENTS\Digital prototyping\Bootstrap\Images\photoshop logo.png" alt="Photoshop"></a>
+        <h3>Photo Manipulation</h3>
+    </div>
+    <div class="card bottom-card">
+        <a href=""><img src="C:\Jia\ISDI\ASSIGNMENTS\Digital prototyping\Bootstrap\Images\UIUX res logo.png" alt="User Research"></a>
+        <h3>User Research</h3>
+    </div>
+</div>
+
+
+
+
+<!-- View portfolio -->
+ <br><br>
+<div class="button-container">
+    <a href="C:\Jia\ISDI\ASSIGNMENTS\Digital prototyping\Bootstrap\Portfolio pg.html" class="home-button">view portfolio</a>
+
+<br><br><br><br><br><br>
+
+
+
+
+
+<!-- contact details -->
+<div class="container"><br>
+    <h2 class="card-title text-center">Let's connect!</h2>
+    <p class="card-text text-center">Looking forward to a great working experience with you</p>
+  </div>
+
+    <div class="card-body"><br>
+        <h5 class="card-title text-center">Contact details</h5>
+       
+<br><br><br>
+      <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-3 col-sm-6 text-center">
+                <img src="C:\Jia\ISDI\ASSIGNMENTS\Digital prototyping\Bootstrap\Images\icons small-02.png" class="img-fluid" alt="Whatsapp" width="35px" height="auto">
+            <a href= "https://web.whatsapp.com/" target="_blank"><p> Whatsapp </p></a>
+              </div>
+
+            <div class="col-md-3 col-sm-6 text-center">
+                <img src="C:\Jia\ISDI\ASSIGNMENTS\Digital prototyping\Bootstrap\Images\icons small-03.png" class="img-fluid" alt="Instagram" width="35px" height="auto">
+                <a href= "https://www.instagram.com/accounts/login/?hl=en" target="_blank"><p> Instagram </p></a>
+              </div>
+
+            <div class="col-md-3 col-sm-6 text-center">
+                <img src="C:\Jia\ISDI\ASSIGNMENTS\Digital prototyping\Bootstrap\Images\icons small-04.png" class="img-fluid" alt="Behance" width="35px" height="auto">
+                <a href= "https://www.behance.net/" target="_blank"><p> Behance </p></a>
+              </div>
+
+            <div class="col-md-3 col-sm-6 text-center">
+                <img src="C:\Jia\ISDI\ASSIGNMENTS\Digital prototyping\Bootstrap\Images\icons small-05.png" class="img-fluid" alt="E-mail" width="35px" height="auto">
+                <a href= "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new" target="_blank"><p> E-mail </p></a>
+              </div>
+        </div>
+    </div> </div>
+
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
